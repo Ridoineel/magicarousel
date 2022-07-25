@@ -37,7 +37,7 @@ let cards = [
     image: Img5
   },
   {
-    name: "IVAI & EREN - ATTACK ON TITAN",
+    name: "LIVAÏ & EREN - ATTACK ON TITAN",
     image: Img6
   },
   {
