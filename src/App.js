@@ -7,8 +7,15 @@ import Img1 from "./assets/images/img1.jpg"
 import Img2 from "./assets/images/img2.jpg"
 import Img3 from "./assets/images/img3.jpg"
 import Img4 from "./assets/images/img4.jpg"
+import Img5 from "./assets/images/img5.jpg"
+import Img6 from "./assets/images/img6.jpg"
+import Img7 from "./assets/images/img7.jpg"
+import Img8 from "./assets/images/img8.jpg"
+import Img9 from "./assets/images/img9.jpg"
+import Img10 from "./assets/images/img10.jpg"
 
 let cards = [
+
   {
     name: "SORA & ERINA - FOOD WARS",
     image: Img1
@@ -25,11 +32,35 @@ let cards = [
     name: "EREN - ATTACK ON TITAN",
     image: Img4
   },
+  {
+    name: "SORA - FOOD WARS",
+    image: Img5
+  },
+  {
+    name: "IVAI & EREN - ATTACK ON TITAN",
+    image: Img6
+  },
+  {
+    name: "ALGORITHM - CODING",
+    image: Img7
+  },
+  {
+    name: "HACKER - HACKING",
+    image: Img8
+  },
+  {
+    name: "MATHEMATIC - SCIENCE",
+    image: Img9
+  },
+  {
+    name: "THACKER - HACKING",
+    image: Img10
+  },
 ]
 
 function App() {
   let cardsContainer = useRef(0);
-  let [initCard, setInitCard] = useState(1)
+  let [initCard, setInitCard] = useState(2)
 
   function cardHandleClick(e) {
     let card = e.target;
