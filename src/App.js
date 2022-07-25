@@ -1,6 +1,7 @@
 import {useRef, useState, useEffect} from "react"
 import CarouselCard from "./components/CarouselCard"
 import CarouselPagination from "./components/CarouselPagination"
+import MyGithubButton from "./components/MyGithubButton"
 
 import Img1 from "./assets/images/img1.jpg"
 import Img2 from "./assets/images/img2.jpg"
@@ -9,7 +10,7 @@ import Img4 from "./assets/images/img4.jpg"
 
 let cards = [
   {
-    name: "SORA & IRUNA - FOOD WARS",
+    name: "SORA & ERINA - FOOD WARS",
     image: Img1
   },
   {
@@ -17,7 +18,7 @@ let cards = [
     image: Img2
   },
   {
-    name: "SORA & IRUNA - FOOD WARS",
+    name: "SORA & ERINA - FOOD WARS",
     image: Img3
   },
   {
@@ -88,6 +89,8 @@ function App() {
           pageRatio="0.5"
         />
       </div>
+
+      <MyGithubButton />
     </div>
   );
 }
