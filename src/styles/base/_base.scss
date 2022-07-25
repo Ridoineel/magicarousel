@@ -23,11 +23,17 @@ body{
     width: 100%;
     overflow-x: hidden;
 }
-//
-// .color-text {
-//     color: $color-text;
-// }
-//
-// .color-headings {
-//     color: $color-headings;
-// }
+
+.color-text {
+    color: $color-text;
+}
+
+.color-headings {
+    color: $color-headings;
+}
+
+.min-height {
+  &-full {
+    min-height: 100vh;
+  }
+}
