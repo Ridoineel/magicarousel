@@ -9,26 +9,38 @@ import Img4 from "./assets/images/img4.jpg"
 
 let cards = [
   {
-    name: "NAME",
+    name: "SORA & IRUNA - FOOD WARS",
     image: Img1
   },
   {
-    name: "NAME",
+    name: "TELESCOPE VIEW - SPACE",
     image: Img2
   },
   {
-    name: "NAME",
+    name: "SORA & IRUNA - FOOD WARS",
     image: Img3
   },
   {
-    name: "NAME",
+    name: "EREN - ATTACK ON TITAN",
     image: Img4
   },
-];
+]
 
 function App() {
   let cardsContainer = useRef(0);
   let [initCard, setInitCard] = useState(1)
+
+  function cardHandleClick(e) {
+    let card = e.target;
+    let cardIndex = Number(card.getAttribute("index"));
+
+    if (cardIndex != initCard) {
+      let paginationButton = document.querySelectorAll(".carousel-pagination span")[cardIndex];
+
+      paginationButton.click();
+    }
+
+  }
 
   useEffect(() => {
     // activate current card
@@ -49,6 +61,7 @@ function App() {
     carouselBgPanel.style.backgroundImage = `url(${img})`;
     carouselBgPanel.style.backgroundSize= "cover";
   }, [initCard])
+
   return (
     <div className="App">
       <div class="carousel__background-panel">
@@ -58,6 +71,9 @@ function App() {
         <div class="container" ref={cardsContainer}>
           {cards.map((item, i) => {
             return <CarouselCard
+                      key={i}
+                      index={i}
+                      handleClick={cardHandleClick}
                       name={item.name}
                       image={item.image}
                    />
